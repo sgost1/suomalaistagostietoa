@@ -94,7 +94,7 @@ käyttäjälle IMEI, sarjanumeron tai muiden tietojen perusteella. Päivityspalv
 tietämään laitteen IP osoitteen, version jota se yrittää hakea ja version josta se yrittää hakea.</p>
 
 <p>Päivityspaketit sisältävät sisäisen signatuurin jonka <code>update_client</code> vahvistaa
-(Tai recovery jos on käytössä <a href="https://shepherd115.github.io/Jep/kautto.html#update-sideload">Sideload</a>).
+(Tai recovery jos on käytössä <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#update-sideload">Sideload</a>).
 Alentamiseen perustuvat hyökkäykset myös estetään ja alennusta ei voi suorittaa ilman että erityistä
 alennuspäivitystä signeerataan Release avaimella. Sisäinen payload <code>update_enginelle</code> on
 myös signeerattu joka tarjoaa toisen signatuurivahvistus kerroksen ja alennussuojan. Verified-Boot
@@ -131,7 +131,7 @@ siihen että jokaisella sovelluksella on sama muistisisältö ja järjestys, se 
 Address-space-Layout-Randomizationia (ASLR), keon canaryarvoja, pinon canaryarvoja jne. Se rampauttaa nämä sillä jokaisella 
 sovelluksella on jokaisen muunkin sovelluksen arvot ja nämä arvot eivät muutu ennen uudelleenkäynnistystä.</p>
 
-<p>Lisätietoa exec-spawning ominaisuudesta löydät <a href="https://shepherd115.github.io/Jep/exec-spawning.html">Täältä</a>.</p>
+<p>Lisätietoa exec-spawning ominaisuudesta löydät <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#exec">Täältä</a>.</p>
 
 <h2 id="selain"><a href="#selain">Selain</a></h2>
 <p>GrapheneOS sisältää Vanadium sivuprojektin joka tarjoaa yksityisyys ja turvallisuus parannellun Chromium forkin. Vanadium on molemmat user-facing selain
@@ -351,7 +351,7 @@ sillä nämä voi mahdollisesti toimia tunnisteina.</p>
 <p>GrapheneOS merkittävästi kohottaa laitteiston kykyjä tarjota parempaa suojaa muistinkorruptoitumis ongelmia vastaan. Jotkut näistä ominaisuuksista
 on suunniteltu suoraan nappaamaan muistinkorruptio bugi joko tarkastuksella tai muistisuojauksella ja abortoimaan prosessi ettei sitä kyetä hyväksikäyttämään.
 Jotkut ominaisuuksista mitigoi ongelmia hieman vähemmän suorasti kuten nollaamalla tiedot vapautuksen yhteydessä, eristetyillä muistialueilla, kasan randomisoinnilla,
-canary arvoilla, vartija-alueilla, viivästetyllä osoitetilan uudelleenkäytöllä <a href="https://shepherd115.github.io/Jep/features.html#komponentit">jne</a>.
+canary arvoilla, vartija-alueilla, viivästetyllä osoitetilan uudelleenkäytöllä <a href="https://sgost1.github.io/suomalaistagostietoa/features.html">jne</a>.
 GrapheneOS ei aiheuta näitä bugeja vaan ne ovat jo olemassa olevia bugeja jotka paljastuu vahvistusten vuoksi. Ominaisuuksien tarkoitus on estää exploitteja,
 ei löytää bugeja mutta ne toimivat myös siinä.
 
@@ -379,7 +379,7 @@ ja tukemaan käyttöjärjestelmää joka ei pelkästään pidä Androidin turval
 
 
         <footer>
-            <a href="https://shepherd115.github.io/Jep/"><img src="mask-icon.svg" width="512" height="512" alt=""/>GrapheneOS</a>
+            <a href="https://sgost1.github.io/suomalaistagostietoa/index.html"><img src="mask-icon.svg" width="512" height="512" alt=""/>GrapheneOS</a>
             <ul id="social">
                 <li><a href="https://twitter.com/GrapheneOS">Twitter</a></li>
                 <li><a href="https://github.com/GrapheneOS">GitHub</a></li>

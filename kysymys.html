@@ -187,20 +187,19 @@ oman hiekkalaatikon resursseihin. Sovellukset eivät kykene "vakoilemaan" käytt
 <p>Sillä sovellus-sandbox on kernelissä, tämän turvallisuusominaisuudet ulottuvat kaikkeen joka on kernelin yläpuolella, kuten käyttöjärjestelmän standardikirjastoihin, sovellusten kehyksiin,
 sovellusten runtimeen ja jokaiseen käyttäjän asentamaan sovellukseen jne jonka vuoksi sovellus sandboxin vahvistaminen parantaa merkittävästi koko käyttöjärjestelmän turvallisuutta.
 Yleisesti, paetakseen sovellus sandboxista, hyökkääjän on murrettava Linux kernelin turvallisuus. Joten kernelin vahvistaminen myös vahvistaa sovellus-sandboxia. GrapheneOS
-vahvistaa näitä molempia kuten dokumentoitu <a href="https://shepherd115.github.io/Jep/features.html">Ominaisuudet</a> sivulla.</p>
+vahvistaa näitä molempia kuten dokumentoitu <a href="https://sgost1.github.io/suomalaistagostietoa/features.html">Ominaisuudet</a> sivulla.</p>
 
 <h2 id="laite-tunnistin"><a id="valkoinen" href="#laite-tunnistin">Onko sovelluksilla pääsy laitetunnisteisiin?</a></h2>
-<p>Android 10 myötä, sovellukset eivät voi saada pääsyä muuttumattomiin laitetunnisteisiin kuten sarjanumeroon, MAC osoitteeseen, IMEI/MEID tietoihin tai
-SIM kortin sarjanumeroon. Ainoastaan tietyt käyttöjärjestelmän komponentit joilla on <code>READ_PRIVILEGED_PHONE_STATE</code> lupa voi saada näihin pääsyn.
-Sovellukset jotka ovat tarkoitettu Android 10 tai korkeammille saavat <code>SecurityException</code> virheen ja vanhemmat sovellukset tyhjän arvon
-yhteensopivuuden vuoksi.<p>
-
-<p>Sillä näistä rajoituksista tuli standardeja, GrapheneOS ainoastaan tekee pienen muutoksen poistaakseen vanhojen sovellusten pääsyn sarjanumeron
-vanhaan muotoon, joka oli silti olemassa yhteensopivuuden vuoksi. Se ennen vaati rajumpia toimia kuten sarjanumeroon pääsyn estäminen mutta nämä ovat nykyään 
-standardeja.</p>
-
-<p>Sovellukset voivat määritellä laitteen mallin (Kuten sen että se on esim Pixel 6) joko suoraan tai ei suoraan laitteiston ja ohjelmiston
-ominaisuuksien vuoksi.</p>
+<p>Android 10 myötä, sovellukset eivät voi saada pääsyä muuttumattomiin laitetunnisteisiin kuten sarjanumeroon, MAC osoitteeseen,
+  IMEI / MEID tietoihin tai SIM kortin sarjanumeroon. Ainoastaan etuoikeutetut sovellukset joilla on <code>READ_PRIVILEGED_PHONE_STATE</code>
+  valkolistattu saavat pääsyn näihin laitetunnisteisiin. Sovellukset joiden TargetSDK on Android 10 tai korkeampi saavat 
+  <code>SecurityException</code> virheen ja vanhemmat sovellukset tyhjän arvon yhteensopivuuden vuoksi.</p>
+  
+  <p>Sillä näistä rajoituksista tuli standardeja, GrapheneOS ainoastaan tekee pienen muutoksen poistaakseen vanhentuneen pääsyn sarjanumeroon
+  vanhojen sovellusten toimesta joka oli silti olemassa yhteensopviuuden vuoksi.</p>
+  
+  <p>Sovellukset voivat määritellä laitteen mallin (Kuten että se on Pixel 6) joko suoraan tai epäsuoraan laitteiston ja ohjelmiston perusteella.
+  
 
 <p>Sen lisäksi ettei sovelluksilla ole pääsyä muuttumattomiin laitetunnistimiin, sovelluksille altistetaan vain pieni osa käyttöjärjestelmän konfiguroinnista.
 Sovellukset voivat havaita että ne ovat GrapheneOS käyttöjärjestelmällä vahvistusten vuoksi ja voivat tunnistaa oman sovellusasennuksensa
@@ -255,7 +254,7 @@ verkostoihin luottamisen sijan.</p>
 <p>Lentokonetilan käyttäminen kokonaan poistaa käytöstä puhelinverkostoyhteydet mutta Wi-Fi
 voidaan ottaa samaan aikaan käyttöön. Tämä mahdollistaa laitteen käytön Wi-Fi Only laitteena.</p>
 
-<p>GrapheneOS lisää <a href="https://shepherd115.github.io/Jep/kautto.html#lte">LTE-Only</a> tilan
+<p>GrapheneOS lisää <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#lte">LTE-Only</a> tilan
  mutta se on ainoastaan pienentämään hyökkäyspintaa. Ei pitäisi erehtyä luulemaan että se 
 tekee puhelinverkostosta luotetun</p>
 
@@ -274,7 +273,7 @@ tekee puhelinverkostosta luotetun</p>
 
 
         <footer>
-            <a href="https://shepherd115.github.io/Jep/"><img src="mask-icon.svg" width="512" height="512" alt=""/>GrapheneOS</a>
+            <a href="https://sgost1.github.io/suomalaistagostietoa/index.html"><img src="mask-icon.svg" width="512" height="512" alt=""/>GrapheneOS</a>
             <ul id="social">
                 <li><a href="https://twitter.com/GrapheneOS">Twitter</a></li>
                 <li><a href="https://github.com/GrapheneOS">GitHub</a></li>
