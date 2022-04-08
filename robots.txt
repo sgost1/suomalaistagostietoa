@@ -1,0 +1,3 @@
+
+User-agent: *
+Sitemap: https://sgost1.github.io/suomalaistagostietoa/sitemap.xml
