@@ -42,7 +42,6 @@
       <li><a href="#update-asetukset">Päivitys asetukset</a></li>
       <li><a href="#update-turvallisuus">Päivitys Turvallisuus</a></li>
       <li><a href="#update-pois">Päivitysten pois kytkeminen</a></li>
-      <li><a href="#update-sideload">Päivitysten Sideloading</a></li>
     </ul>
   <li><a href="#exec">Exec Spawning</a></li>
   <li><a href="#selain">Selain</a></li>
@@ -94,7 +93,7 @@ käyttäjälle IMEI, sarjanumeron tai muiden tietojen perusteella. Päivityspalv
 tietämään laitteen IP osoitteen, version jota se yrittää hakea ja version josta se yrittää hakea.</p>
 
 <p>Päivityspaketit sisältävät sisäisen signatuurin jonka <code>update_client</code> vahvistaa
-(Tai recovery jos on käytössä <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#update-sideload">Sideload</a>).
+(Tai recovery jos on käytössä Sideload).
 Alentamiseen perustuvat hyökkäykset myös estetään ja alennusta ei voi suorittaa ilman että erityistä
 alennuspäivitystä signeerataan Release avaimella. Sisäinen payload <code>update_enginelle</code> on
 myös signeerattu joka tarjoaa toisen signatuurivahvistus kerroksen ja alennussuojan. Verified-Boot
@@ -104,11 +103,6 @@ ja Auditor toimivat viimeisenä suojana.</p>
 <p>On vahvasti suositeltavaa jättää automaattiset päivitykset päälle. On kuitenkin mahdollista
 kytkeä päivittäjäsovellus pois käytöstä sijainnista 
 Asetukset ➔ Sovellukset ➔ Näytä Järjestelmä ➔ System Updater.</p>
-
-<h2 id="update-sideload"><a href="#update-sideload">Päivitysten Sideloading</a></h2>
-<p>Päivitykset voidaan ladata <a href="https://grapheneos.org/releases">Releases</a> sivulta ja 
-asentaa recoveryn kautta adb sideloading ominaisuuden avulla. Zip tiedostot ovat signeerattu
-ja vahvistettu recoveryn avulla.</p>
 
 <p>Asentamista varten, on ensin mentävä recoveryyn. Tämän voi tehdä komennolla <code>adb reboot recovery</code>
 tai valitsemalla "Recovery" vaihtoehto bootloader käyttöliittymästä.</p>
@@ -195,7 +189,7 @@ JIT moottori ja <a href="https://madaidans-insecurities.github.io/firefox-chromi
   ei ole pääsyä muiden käyttäjäprofiilien tietoihin. Tiedostojärjestelmä-pohjainen salaus on suunniteltu niin että tiedostoja voi poistaa
   vaikkei niiden salausavaimiin ole pääsyä. Tämän vuoksi omistajaprofiili voi poistaa muita käyttäjäprofiileja.</p>
   
-  <p>GrapheneOS lisää kyvyn lopettaa käyttökerran käyttäjäjprofiiliin kirjautumisen jälkeen. Se lisää End Session napin lukitusnäytölle
+  <p>GrapheneOS lisää kyvyn lopettaa käyttökerran käyttäjäprofiiliin kirjautumisen jälkeen. Se lisää End Session napin lukitusnäytölle
   sekä globaaliin toiminta valikkoon johon pääsee pitämällä Power nappia pohjassa. Tätä ei voi tehdä omistajaprofiilille ilman laitteen
   uudelleenkäynnistämistä sillä se säilöö koko järjestelmää koskevia tietoja.</p>
   
@@ -207,7 +201,7 @@ JIT moottori ja <a href="https://madaidans-insecurities.github.io/firefox-chromi
   
   <p>Tiedostotiedot salataan käyttäen algoritmia AES-256-XTS ja tiedostojen nimet algoritmilla AES-256-CTS. Uniikki avain muodostetaan
   algoritmilla HKDF-SHA512 jokaiselle normaalille tiedostolle ja kansiolle profiilin salausavaimesta tai globaalista salausavaimesta.
-  Kansioavainta käytetään salaamaan tiedostojen nimet. GrapheneOS lisää tiedosto nimen täytettä (padding) 16 bitistä 32 bittiin.</p>
+  Kansioavainta käytetään salaamaan tiedostojen nimet. GrapheneOS lisää tiedosto nimen padding arvon 16 bitistä 32 bittiin.</p>
   
   <p>OS muodostaa salasana tokenin käyttäjäprofiilin lukitusnäytön salasanasta käyttäen scryptiä. Tätä käytetään pää syötteenä
   avainten muodostamiseen</p>
@@ -294,7 +288,7 @@ näillä tuoreilla avaimilla.</p>
 
 <p>Käyttääkseen Google Playta on vain asennettava nämä 3 sovellusta haluamaan käyttäjäprofiiliin.</p>
 
-<p>Yksinkertaisin tapa on käyttää omistajaprofiilia. Sovellukset jotka ovat omistajaprofiilissa elävät hiekkalaatikossa niinkuin muissakin
+<p>Yksinkertaisin tapa on käyttää omistajaprofiilia. Sovellukset jotka ovat omistajaprofiilissa elävät hiekkalaatikossa niin kuin muissakin
 eikä saa minkäänlaisia erityisiä oikeuksia. Jos haluaa valita mitkä sovellukset käyttävät yhteensopivuuskerrosta on tämä asennettava
 käyttäjäprofiiliin jossa on nämä sovellukset.</p>
 
@@ -357,7 +351,7 @@ ei löytää bugeja mutta ne toimivat myös siinä.
 
 <br><br>Samanlailla, jotkut muut yksityisyys ja turvallisuus parannukset vähentävät sovelluksien pääsyä tiettyihin resursseihin ja voi aiheuttaa toimimattomuutta.
 Useimmat näistä on oletuksena aina käytössä mutta jotkut ovat käyttäjän hallinnassa kuten Sensors ja Network lupa sekä kyky kytkeä natiivin koodin debuggaus
-pois parantaakseen sovellustan sandboxia. Sovellukset eivät ehkä kykene käsittelemään näiden oikeuksien pois ottoa. Varsinkin pankki sovellukset yleensä
+pois parantaakseen sovellusten sandboxia. Sovellukset eivät ehkä kykene käsittelemään näiden oikeuksien pois ottoa. Varsinkin pankki sovellukset yleensä
 vaativat natiivin koodin debuggausta luodakseen muureja ettei heidän koodia pystyisi tarkastelemaan.
 
 <br><br>Jotkut sovellukset, yleensä sairaala / rahaan liittyvät myös käyttävät yhä enemmän Googlen SafetyNet vahvistus palvelua todentamaan käyttöjärjestelmän

@@ -119,17 +119,19 @@ sama vuoden 2020 Qualcomm SoC. Näillä laitteilla on noin 2-3 vuotta tukea jäl
 kohtalainen valinta jos Pixel 6 tai Pixel 6 Pro ei ole vaihtoehto.</p>
 
 <h2 id="tulevaisuuden-laitteet"><a id="valkoinen" href="#tulevaisuuden-laitteet">Mitkä laitteet tulee olemaan tuettuja tulevaisuudessa?</a></h2>
-<p>Laitteet ovat tarkasti ja varovasti valittuja niiden ominaisuuksien perusteella laajan laitetuen sijan. Laaja laitetuki on vastike projektin
-tavoitteilla ja projekti aikoo lopulta siirtyä laitteisto ja laiteohjelmisto maailmaan sen sijan että se antaisi näille vain suosituksia ja bugi raportteja.</p>
+<p>Laitteet valitaan tarkasti niiden ominaisuuksien perusteella sen sijan että projekti yrittäisi saada laajan laitetuen. Laitteiden
+on tavattava projektin standardit jotta ne voidaan luokitella mahdolliseksi kohteeksi. Laitteessa on oltava kyky asentaa erillinen
+käyttöjärjestelmä, standardit laitteisto pohjaiset turvallisuusominaisuudet 
+kuten <a href="https://source.android.com/security/keystore">laitteiston tukema avainvarasto</a>,
+<a href="https://source.android.com/security/verifiedboot/">verified-boot</a>, attestation / todennus API ja lukuisia laitteistopohjaisia
+exploittien mitigointitekniikoita täytyy olla saatavilla. Laitteissa tulee myös olla kunnollinen IOMMUn integrointi eristämään fyysiset
+komponentit toisistaan kuten GPU, radiot (NFC, Wi-Fi, Bluetooth, matkapuhelinverkot), media-decoder/encoder, kuva prosessori jne. Sillä
+jos kunnollinen laitteisto / laiteohjelmisto puuttuu niin OS ei voi tarjota tähän korviketta. Laitteilla on myös oltava meneillään oleva tuki
+laiteohjelmistolle ja ohjelmistolle ja heidän on tarjottava kunnollisia turvallisuuspäivityksiä luvattuun aikaan asti. Laitteet jotka
+ovat end-of-life eivät ole tuettuja.</p>
 
-<p>Laitteiden on tavattava projektin tarpeet ollakseen mahdollinen kohde. Sen lisäksi että laitteessa on tuki asentaa erillinen käyttöjärjestelmä,
-on laitteiden oltava vähintään yhtä turvallinen kuin Pixel tai iPhone. Normaalit laitteisto pohjaiset turvallisuus ominaisuudet kuten
-laitteistopohjainen avainvarasto, verified-boot ja tuki omille signeeraus avaimille. Jonkinlainen HSM siru kuten Titan M, turvallinen
-ja robusti SoC ja IOMMU jne. Sillä jos kunnollinen laitteisto / laiteohjelmisto puuttuu, ei käyttöjärjestelmä voi tarjota korviketta.
-Laitteessa on oltava aktiivinen ja pitkä tuki päivityksille ja laitteet jotka ovat end-of-life ei ole enää tuettuja GrapheneOS projektin toimesta.</p>
-
-<p>Jotta laite voisi olla tuettu, siihen on oltava resursseja valmiina ja jokaisen julkaisun tulee olla robusti ja vakaa sekä kaikki normaalit toiminnot
-käytössä ja suuri määrä testausta jokaiselle julkaisulle.</p>
+<p>Jotta laitetta voitaisiin tukea, on tähän myös oltava kiinnostusta ja resursseja yhteisön ja projektin toimesta. Jokaisen version on 
+oltava robusti ja vakaa, sekä kaikkien perustoimintojen käytettävissä.</p>
 
 <h2 id="milloin-laitteita"><a id="valkoinen" href="#milloin-laitteita">Milloin useammat laitteet tulee olemaan tuettuja?</a></h2>
 <p>Laajempi laitetuki voi tapahtua vain kun yhteisö (yritykset, organisaatiot ja yksilöt) astuvat tekemään huomattavia, jatkuvia muutoksia
@@ -198,7 +200,7 @@ vahvistaa näitä molempia kuten dokumentoitu <a href="https://sgost1.github.io/
   <code>SecurityException</code> virheen ja vanhemmat sovellukset tyhjän arvon yhteensopivuuden vuoksi.</p>
   
   <p>Sillä näistä rajoituksista tuli standardeja, GrapheneOS ainoastaan tekee pienen muutoksen poistaakseen vanhentuneen pääsyn sarjanumeroon
-  vanhojen sovellusten toimesta joka oli silti olemassa yhteensopviuuden vuoksi.</p>
+  vanhojen sovellusten toimesta joka oli silti olemassa yhteensopivuuden vuoksi.</p>
   
   <p>Sovellukset voivat määritellä laitteen mallin (Kuten että se on Pixel 6) joko suoraan tai epäsuoraan laitteiston ja ohjelmiston perusteella.
   
@@ -264,13 +266,13 @@ tekee puhelinverkostosta luotetun</p>
 <div id="teksti">Siellä on haittoja sovellusten ennalta-asentamiseen ja vain muutamia etuja. Sen sijan että GrapheneOS ennalta-asentaisi kasan sovelluksia, on loogisempaa käyttäjän itse asentaa haluamansa sovellukset F-Droidin, Aurora Storen tai Play kaupan kautta. GrapheneOS suunnittelee omaa first-party sovellusten päivitys järjestelmää ja "sovelluskauppaa" joka on robustimpi ja turvallisempi kuin muut vaihtoehdot. Sovellusten ennalta asentaminen lisäisi myös hyökkäyspintaa, ellei käyttäjät kytke näitä pois päältä. Sovellusten ennalta-asentaminen olisi myös kamala kumota sillä sovelluksen poistaminen käyttöjärjestelmästä johtaisi käyttäjien tietojen tuhoutumiseen.<br><br>GrapheneOS keskittyy oleellisten turvallisuus / yksityisyys parannusten tekemiseen ja satunnaisten sovellusten ennalta-asentaminen on yleensä tämän ulkopuolella ja sitä vastaan.</div>
 
 <h2 id="root"><a id="valkoinen" href="#root">Onko GrapheneOS roottausta?</a></h2>
-<div id="teksti">Ei, GrapheneOS on suunniteltu minimoimaan oikeudet ja hyökkäyspinta ja roottaaminen olisi tämän vastakohta. Androidin arkkitehtuuri on suuniteltu minimaalisten lupien ympärille. Oletuksena kuudella prosessilla on lupa suoriutua roottina ja silloinkin nämä on hyvin rajattuja SElinuxin vuoksi ja kokonaan rajoittamatonta roottia ei ole olemassa Androidissa. Vaikka antaisi vain tietyille sovelluksille root pääsyn voi hyökkääjä käyttää esimerkiksi clickjacking tekniikkaa tai hyväksikäyttää root oikeutettua sovellusta. Verified-boot havaitsisi muutokset ja kumoaisi nämä palauttaakseen laitteen tilaan jossa se läpäisee signatuuri tarkastuksen, tämä tarkoittaisi että roottaaminen myös vaatisi verified-bootin jättämistä kokonaan pois mikä osittain tuhoaa Androidin turvallisuusmallin.</div>
+<div id="teksti">Ei, GrapheneOS on suunniteltu minimoimaan oikeudet ja hyökkäyspinta ja roottaaminen olisi tämän vastakohta. Androidin arkkitehtuuri on suunniteltu minimaalisten lupien ympärille. Oletuksena kuudella prosessilla on lupa suoriutua roottina ja silloinkin nämä on hyvin rajattuja SElinuxin vuoksi ja kokonaan rajoittamatonta roottia ei ole olemassa Androidissa. Vaikka antaisi vain tietyille sovelluksille root pääsyn voi hyökkääjä käyttää esimerkiksi clickjacking tekniikkaa tai hyväksikäyttää root oikeutettua sovellusta. Verified-boot havaitsisi muutokset ja kumoaisi nämä palauttaakseen laitteen tilaan jossa se läpäisee signatuuri tarkastuksen, tämä tarkoittaisi että roottaaminen myös vaatisi verified-bootin jättämistä kokonaan pois mikä osittain tuhoaa Androidin turvallisuusmallin.</div>
 
 <h3 id="qaotsikot">Muut</h3>
 
 <section id="reuna">
 <h2 id="perustus"><a id="valkoinen" href="#perustus">Miten GrapheneOS perustettiin?</a></h2>
-<div id="teksti"><a href="https://twitter.com/DanielMicay">Daniel Micay</a> perusti GrapheneOS projektin vuoden 2014 lopussa. Se alkoi soolo projektina jossa hän jatkoi hänen aiempaa turvallisuus / yksityisyys teknologia työtä. Projekti ensin loi portin OpenBSDn mallocille (Memory Allocator) Androidin Bionic-C kirjastoon ja portin PaX kernel korjauksille tuetuille laitteille. Siitä nopeasti kasvoi laaja määrä kotonakasvatettuja yksityisyys ja turvallisuus ominaisuuksia. Työ alkoi saada koodia up-streamiin AOSP:hen ja muihin up-stream projekteihin. Suuri osa näistä saatiin up-streamiin tai oli periytynyt näistä. Projekti kykeni liikkumaan erittäin nopeasti niinä päivinä sillä siellä oli paljon pieniä parannuksia joita jonkun oli tehtävä. Projekti ei vielä yrittänyt luoda robustia käyttökelpoista käyttöjärjestelmää.<br><br> Vuoden 2015 lopussa, yritys tuli projektiin mukaan ja heistä tuli projektin isoin sponsori. GrapheneOS oli ennen tunnettu nimellä CopperheadOS kun se oli tämän yrityksen alla. Tarkoitus oli rakentaa bisnestä projektin ympärille, myyden esimerkiksi tukea ja suljettuja variaatioita käyttöjärjestelmästä. Yrityksen piti palvella projektin tarpeita eikä toisinpäin. Oli sovittua että GrapheneOS pysyy yksinomaan Daniel Micayn omistuksessa ja johdossa. Yritys epäonnistui kunnioittamaan tätä. 2018 yrityksen toimitusjohtaja yritti ottaa vallan projektista mutta epäonnistui, he rampautti infrastruktuurin ja varasti lahjoitukset mutta projekti on kyennyt jatkamaan tästä. Daniel Micay irtautui yrityksestä ja nimeksi muuntui AndroidHardening josta myöhemmin tuli GrapheneOS.
+<div id="teksti"><a href="https://twitter.com/DanielMicay">Daniel Micay</a> perusti GrapheneOS projektin vuoden 2014 lopussa. Se alkoi soolo projektina jossa hän jatkoi hänen aiempaa turvallisuus / yksityisyys teknologia työtä. Projekti ensin loi portin OpenBSDn mallocille (Memory Allocator) Androidin Bionic-C kirjastoon ja portin PaX kernel korjauksille tuetuille laitteille. Siitä nopeasti kasvoi laaja määrä kotona kasvatettuja yksityisyys ja turvallisuus ominaisuuksia. Työ alkoi saada koodia up-streamiin AOSP:hen ja muihin up-stream projekteihin. Suuri osa näistä saatiin up-streamiin tai oli periytynyt näistä. Projekti kykeni liikkumaan erittäin nopeasti niinä päivinä sillä siellä oli paljon pieniä parannuksia joita jonkun oli tehtävä. Projekti ei vielä yrittänyt luoda robustia käyttökelpoista käyttöjärjestelmää.<br><br> Vuoden 2015 lopussa, yritys tuli projektiin mukaan ja heistä tuli projektin isoin sponsori. GrapheneOS oli ennen tunnettu nimellä CopperheadOS kun se oli tämän yrityksen alla. Tarkoitus oli rakentaa bisnestä projektin ympärille, myyden esimerkiksi tukea ja suljettuja variaatioita käyttöjärjestelmästä. Yrityksen piti palvella projektin tarpeita eikä toisinpäin. Oli sovittua että GrapheneOS pysyy yksinomaan Daniel Micayn omistuksessa ja johdossa. Yritys epäonnistui kunnioittamaan tätä. 2018 yrityksen toimitusjohtaja yritti ottaa vallan projektista mutta epäonnistui, he rampautti infrastruktuurin ja varasti lahjoitukset mutta projekti on kyennyt jatkamaan tästä. Daniel Micay irtautui yrityksestä ja nimeksi muuntui AndroidHardening josta myöhemmin tuli GrapheneOS.
 </main>
 
 

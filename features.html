@@ -31,16 +31,6 @@
 </nav>
 <main>
 
-<h1 id="otsikot">Laitteisto (Pixel 5)</h1>
-
-<ul id="vasenviiva">
-<li>Täysi <a href="https://source.android.com/security/verifiedboot/">Verified-Boot</a> ja tuki omille signeeraus avaimille - Takaa että kaikki suoritettu koodi tulee luotettavasta lähteestä</li>
-<li><a href="https://www.blog.google/products/pixel/titan-m-makes-pixel-3-our-most-secure-phone-yet/">Titan M</a> - Titan M on Pixel puhelimien HSM siru joka varastoi krytpograafisen materiaalin käyttäen StrongBox avainvarastoa. Myös integroitu Verified-Boot prosessiin sekä tarjoaa <a href="https://android-developers.googleblog.com/2018/05/insider-attack-resistance.html">insider-attack-resistancen</a> joka estää Googlea tai hyökkääjää asentamasta haitallista laiteohjelmisto versiota</li>
-<li>Aiemmissa Pixeleissä kuin Pixel 6 on Qualcommin SoC joka implementoi modernit exploittien mitigointikyvyt sekä robustin IOMMUn eristämään fyysiset komponentit toisistaan</li>
-<li>Pixelien kernelit kootaan useiden vahvistusten kanssa johon kuuluu esimerkiksi CFI ja ShadowCallStack ja GrapheneOS parantaa näitä entisestään</li>
-<li>Kunnollinen <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#wifi">MAC osoitteen randomisointi</a></li>
-</ul>
-
 <h1 id="otsikot">Käyttöjärjestelmä<img id="kuvah" src="mask-icon.svg" alt="GrapheneOS Logo"></h1>
 <ul id="vasenviiva">
   <li>Vahvistettu / <a href="https://github.com/GrapheneOS/hardened_malloc/blob/main/README.md#security-properties">Hardened memory allocator</a>
@@ -122,7 +112,7 @@ Tämä pienentää sensitiivisten tietojen elinaikaa sekä estää use-after-fre
   <li>Pieniä tiedostojärjestelmän vahvistuksia</li>
   <li>Korjattu useita vakavia tietoturvaongelmia joustavan päivitysinfrastruktuurin ansiosta</li>
   <li>Vaivattomat käyttöjärjestelmän <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#paivitukset">päivitykset</a> mitkä pysyvät poissa tieltä sekä tuki mennä aiempaan versioon jos päivitys epäonnistuu</li>
-  <li>Vaatii laitteen avausta ennen kuin sensitiiviä ominaisuuksia quick-tilesseissä voi käyttää (Wifi, lentokonetila, GPS, NFC jne)</li>
+  <li>Vaatii laitteen avausta ennen kuin sensitiivisiä ominaisuuksia quick-tilesseissä voi käyttää (Wifi, lentokonetila, GPS, NFC jne)</li>
   <li><a href="https://sgost1.github.io/suomalaistagostietoa/kysymys.html#bundle">Minimaalinen määrä ennalta asennettuja sovelluksia / palveluita</a></li>
   <li>Ei Googlen palveluita (GooglePlayPalvelut) tai sovelluksia integroitu itse käyttöjärjestelmään</li>
   <li>Kyky estää muita käyttäjäprofiileja asentamasta sovelluksia</li>
