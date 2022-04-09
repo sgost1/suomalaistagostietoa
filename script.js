@@ -37,7 +37,7 @@ function valitseLaite() {
     if (laiteYksiPixelNA.checked) {
         document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pNa.verkko;
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pNa.paino;
-        document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne" + pNa.rakenne;
+        document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pNa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pNa.sim;
         document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pNa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pNa.koko;
@@ -51,7 +51,7 @@ function valitseLaite() {
     if (laiteYksiPixelKuusi.checked) {
         document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pKa.paino;
-        document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne" + pKa.rakenne;
+        document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pKa.sim;
         document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pKa.koko;
@@ -62,24 +62,10 @@ function valitseLaite() {
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
     }
-    if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
-        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
-        document.getElementById("laiteYksiPaino").innerHTML = "";
-        document.getElementById("laiteYksiRakenne").innerHTML = "";
-        document.getElementById("laiteYksiSim").innerHTML = "";
-        document.getElementById("laiteYksiNaytto").innerHTML = "";
-        document.getElementById("laiteYksiKoko").innerHTML = "";
-        document.getElementById("laiteYksiResoluutio").innerHTML = "";
-        document.getElementById("laiteYksiSuojaus").innerHTML = "";
-        document.getElementById("laiteYksiSoc").innerHTML = "";
-        document.getElementById("laiteYksiCpu").innerHTML = "";
-        document.getElementById("laiteYksiGpu").innerHTML = "";
-        document.getElementById("laiteYksiMuisti").innerHTML = "";
-    }
     if (laiteKaksiPixelNA.checked) {
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pNa.verkko;
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pNa.paino;
-        document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne" + pNa.rakenne;
+        document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne: " + pNa.rakenne;
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pNa.sim;
         document.getElementById("laiteKaksiNaytto").innerHTML = "Näyttö: " + pNa.nautonTyyli;
         document.getElementById("laiteKaksiKoko").innerHTML = "Koko: " + pNa.koko;
@@ -93,7 +79,7 @@ function valitseLaite() {
     if (laiteKaksiPixelKuusi.checked) {
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pKa.paino;
-        document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne" + pKa.rakenne;
+        document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pKa.sim;
         document.getElementById("laiteKaksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
         document.getElementById("laiteKaksiKoko").innerHTML = "Koko: " + pKa.koko;
@@ -103,6 +89,24 @@ function valitseLaite() {
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pKa.cpu;
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
+    }
+arvioiLaiteValinta()
+}
+
+function arvioiLaiteValinta() {
+    if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
+        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
+        document.getElementById("laiteYksiPaino").innerHTML = "";
+        document.getElementById("laiteYksiRakenne").innerHTML = "";
+        document.getElementById("laiteYksiSim").innerHTML = "";
+        document.getElementById("laiteYksiNaytto").innerHTML = "";
+        document.getElementById("laiteYksiKoko").innerHTML = "";
+        document.getElementById("laiteYksiResoluutio").innerHTML = "";
+        document.getElementById("laiteYksiSuojaus").innerHTML = "";
+        document.getElementById("laiteYksiSoc").innerHTML = "";
+        document.getElementById("laiteYksiCpu").innerHTML = "";
+        document.getElementById("laiteYksiGpu").innerHTML = "";
+        document.getElementById("laiteYksiMuisti").innerHTML = "";
     }
     if (laiteKaksiPixelKuusi.checked && laiteKaksiPixelNA.checked) {
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "";
