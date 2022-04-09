@@ -35,53 +35,79 @@
 
 <main>
 
-  <div class="row">
-    <div class="column">
-<article id="laiteRajaus">
-<p>Valitse laite:</p>
-<input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel4a">Pixel 4a <br>
-<input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel6">Pixel 6
-</article>
 
-<p id="laiteYksiPaino"></p>
-<p id="laiteYksiRakenne"></p>
-<p id="laiteYksiSim"></p>
-<p id="laiteYksiNaytto"></p>
-<p id="laiteYksiKoko"></p>
-<p id="laiteYksiResoluutio"></p>
-<p id="laiteYksiSuojaus"></p>
-<p id="laiteYksiSoc"></p>
-<p id="laiteYksiCpu"></p>
-<p id="laiteYksiGpu"></p>
-<p id="laiteYksiMuisti"></p>
-<p id="laiteYksiTurvallisuusSiru"></p>
-<p style="color:red;" id="laiteYksiVirhe"></p>
 
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <article id="laiteRajaus">
+          <p>Valitse laite:</p>
+          <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel4a">Pixel 4a <br>
+          <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel6">Pixel 6
+        </article>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <article id="laiteRajaus">
+          <p>Valitse laite 2: </p>
+      <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteKaksiPixel4a">Pixel 4a <br>
+      <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteKaksiPixel6">Pixel 6
+          </article>
+      </div>
     </div>
-    <div class="column">
 
-<article id="laiteRajaus">
-<p>Valitse laite: </p>
-<input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteKaksiPixel4a">Pixel 4a <br>
-<input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteKaksiPixel6">Pixel 6
-</article>
-
-<p id="laiteKaksiPaino"></p>
-<p id="laiteKaksiRakenne"></p>
-<p id="laiteKaksiSim"></p>
-<p id="laiteKaksiNaytto"></p>
-<p id="laiteKaksiKoko"></p>
-<p id="laiteKaksiResoluutio"></p>
-<p id="laiteKaksiSuojaus"></p>
-<p id="laiteKaksiSoc"></p>
-<p id="laiteKaksiCpu"></p>
-<p id="laiteKaksiGpu"></p>
-<p id="laiteKaksiMuisti"></p>
-<p id="laiteKaksiTurvallisuusSiru"></p>
-<p style="color:red;" id="laiteKaksiVirhe"></p>
-
-    </div>
-  </div>
+<table>
+  <tr>
+    <td><p id="laiteYksiPaino"></p></td>
+    <td><p id="laiteKaksiPaino"></p></td>
+  </tr>
+  <tr>
+    <td><p id="laiteYksiRakenne"></p></td>
+    <td><p id="laiteKaksiRakenne"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiSim"></p></td>
+    <td><p id="laiteKaksiSim"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiNaytto"></p></td>
+    <td><p id="laiteKaksiNaytto"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiKoko"></p></td>
+    <td><p id="laiteKaksiKoko"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiResoluutio"></p></td>
+    <td><p id="laiteKaksiResoluutio"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiSuojaus"></p></td>
+    <td><p id="laiteKaksiSuojaus"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiSoc"></p></td>
+    <td><p id="laiteKaksiSoc"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiCpu"></p></td>
+    <td><p id="laiteKaksiCpu"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiGpu"></p></td>
+    <td><p id="laiteKaksiGpu"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiMuisti"></p></td>
+    <td><p id="laiteKaksiMuisti"></p></td> 
+  </tr>
+  <tr>
+    <td><p id="laiteYksiTurvallisuusSiru"></p></td>
+    <td><p id="laiteKaksiTurvallisuusSiru"></p></td> 
+  </tr>
+  <tr>
+    <td><p style="color:red;" id="laiteYksiVirhe"></p></td>
+    <td><p style="color:red;" id="laiteKaksiVirhe"></p></td>
+  </tr>
+</table>
 
 <script src="script.js"></script>
 </main>
