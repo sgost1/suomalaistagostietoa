@@ -5,7 +5,6 @@ const laiteKaksiPixelNA = document.getElementById("laiteKaksiPixel4a");
 const laiteKaksiPixelKuusi = document.getElementById("laiteKaksiPixel6");
 
 const pNa = { // Pixel 4a
-    verkko:"GSM / HSPA / LTE",
     paino:"143 g",
     rakenne:"Edestä Gorilla Glass 3, takaata muovia, runko muovia",
     sim:"Nano-SIM ja/tai eSIM",
@@ -19,7 +18,6 @@ const pNa = { // Pixel 4a
     muisti:"128GB 6GB RAM",
 };
 const pKa = { // Pixel 6
-    verkko:"GSM / CDMA / HSPA / EVDO / LTE / 5G",
     paino:"207 g",
     rakenne:"Edestä Gorilla Glass Victus, takaata Gorilla Glass 6, runko alumiinia",
     sim:"Nano-SIM ja/tai eSIM",
@@ -35,7 +33,6 @@ const pKa = { // Pixel 6
 
 function valitseLaite() {
     if (laiteYksiPixelNA.checked) {
-        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pNa.verkko;
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pNa.paino;
         document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pNa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pNa.sim;
@@ -51,7 +48,6 @@ function valitseLaite() {
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteYksiPixelKuusi.checked) {
-        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pKa.paino;
         document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pKa.sim;
@@ -67,7 +63,6 @@ function valitseLaite() {
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelNA.checked) {
-        document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pNa.verkko;
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pNa.paino;
         document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne: " + pNa.rakenne;
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pNa.sim;
@@ -83,7 +78,6 @@ function valitseLaite() {
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelKuusi.checked) {
-        document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pKa.paino;
         document.getElementById("laiteKaksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pKa.sim;
@@ -105,7 +99,6 @@ function arvioiLaiteValinta() {
     if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
         document.getElementById("laiteYksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
 
-        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteYksiPaino").innerHTML = "";
         document.getElementById("laiteYksiRakenne").innerHTML = "";
         document.getElementById("laiteYksiSim").innerHTML = "";
@@ -121,7 +114,6 @@ function arvioiLaiteValinta() {
     if (laiteKaksiPixelKuusi.checked && laiteKaksiPixelNA.checked) {
         document.getElementById("laiteKaksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
 
-        document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteKaksiPaino").innerHTML = "";
         document.getElementById("laiteKaksiRakenne").innerHTML = "";
         document.getElementById("laiteKaksiSim").innerHTML = "";
@@ -135,7 +127,6 @@ function arvioiLaiteValinta() {
         document.getElementById("laiteKaksiMuisti").innerHTML = "";
     }
     if (!laiteYksiPixelKuusi.checked && !laiteYksiPixelNA.checked) {
-        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteYksiPaino").innerHTML = "";
         document.getElementById("laiteYksiRakenne").innerHTML = "";
         document.getElementById("laiteYksiSim").innerHTML = "";
@@ -149,7 +140,6 @@ function arvioiLaiteValinta() {
         document.getElementById("laiteYksiMuisti").innerHTML = "";
     }
     if (!laiteKaksiPixelKuusi.checked && !laiteKaksiPixelNA.checked) {
-        document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteKaksiPaino").innerHTML = "";
         document.getElementById("laiteKaksiRakenne").innerHTML = "";
         document.getElementById("laiteKaksiSim").innerHTML = "";
