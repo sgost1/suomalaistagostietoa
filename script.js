@@ -50,6 +50,7 @@ function valitseLaite() {
 
         document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 4a";
         document.getElementById("laiteYksiVirhe").innerHTML = "";
+
     }
     if (laiteYksiPixelKuusi.checked) {
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pKa.paino;

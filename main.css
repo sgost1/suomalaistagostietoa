@@ -16,6 +16,11 @@ body {
     background-size: 400px 600px;
 }
 
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
 #laiteRajaus {
     color:black;
     font-weight: bold;
