@@ -16,6 +16,7 @@ const pNa = { // Pixel 4a
     cpu:"Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)",
     gpu:"Adreno 618",
     muisti:"128GB 6GB RAM",
+    turvallisuusSiru:"Titan M"
 };
 const pKa = { // Pixel 6
     paino:"207 g",
@@ -29,6 +30,7 @@ const pKa = { // Pixel 6
     cpu:"Octa-core (2x2.80 GHz Cortex-X1 & 2x2.25 GHz Cortex-A76 & 4x1.80 GHz Cortex-A55)",
     gpu:"Mali-G78 MP20",
     muisti:"128GB 8GB RAM",
+    turvallisuusSiru:"Titan M2"
 }
 
 function valitseLaite() {
@@ -44,6 +46,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pNa.cpu;
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
+        document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
 
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
@@ -59,6 +62,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pKa.cpu;
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
+        document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
 
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
@@ -74,6 +78,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pNa.cpu;
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
+        document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
 
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
@@ -89,6 +94,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pKa.cpu;
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
+        document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
 
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
@@ -124,6 +130,7 @@ function alustaLaiteYksiTiedot() {
     document.getElementById("laiteYksiCpu").innerHTML = "";
     document.getElementById("laiteYksiGpu").innerHTML = "";
     document.getElementById("laiteYksiMuisti").innerHTML = "";
+    document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "";
 }
 function alustaLaiteKaksiTiedot() {
     document.getElementById("laiteKaksiPaino").innerHTML = "";
@@ -137,4 +144,5 @@ function alustaLaiteKaksiTiedot() {
     document.getElementById("laiteKaksiCpu").innerHTML = "";
     document.getElementById("laiteKaksiGpu").innerHTML = "";
     document.getElementById("laiteKaksiMuisti").innerHTML = "";
+    document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "";
 }
