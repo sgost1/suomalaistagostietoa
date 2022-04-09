@@ -122,4 +122,32 @@ function arvioiLaiteValinta() {
         document.getElementById("laiteKaksiGpu").innerHTML = "";
         document.getElementById("laiteKaksiMuisti").innerHTML = "";
     }
+    if (!laiteYksiPixelKuusi.checked && !laiteYksiPixelNA.checked) {
+        document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
+        document.getElementById("laiteYksiPaino").innerHTML = "";
+        document.getElementById("laiteYksiRakenne").innerHTML = "";
+        document.getElementById("laiteYksiSim").innerHTML = "";
+        document.getElementById("laiteYksiNaytto").innerHTML = "";
+        document.getElementById("laiteYksiKoko").innerHTML = "";
+        document.getElementById("laiteYksiResoluutio").innerHTML = "";
+        document.getElementById("laiteYksiSuojaus").innerHTML = "";
+        document.getElementById("laiteYksiSoc").innerHTML = "";
+        document.getElementById("laiteYksiCpu").innerHTML = "";
+        document.getElementById("laiteYksiGpu").innerHTML = "";
+        document.getElementById("laiteYksiMuisti").innerHTML = "";
+    }
+    if (!laiteKaksiPixelKuusi.checked && !laiteKaksiPixelNA.checked) {
+        document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "";
+        document.getElementById("laiteKaksiPaino").innerHTML = "";
+        document.getElementById("laiteKaksiRakenne").innerHTML = "";
+        document.getElementById("laiteKaksiSim").innerHTML = "";
+        document.getElementById("laiteKaksiNaytto").innerHTML = "";
+        document.getElementById("laiteKaksiKoko").innerHTML = "";
+        document.getElementById("laiteKaksiResoluutio").innerHTML = "";
+        document.getElementById("laiteKaksiSuojaus").innerHTML = "";
+        document.getElementById("laiteKaksiSoc").innerHTML = "";
+        document.getElementById("laiteKaksiCpu").innerHTML = "";
+        document.getElementById("laiteKaksiGpu").innerHTML = "";
+        document.getElementById("laiteKaksiMuisti").innerHTML = "";
+    }
 }
