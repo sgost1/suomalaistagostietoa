@@ -47,6 +47,8 @@ function valitseLaite() {
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pNa.cpu;
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
+
+        document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteYksiPixelKuusi.checked) {
         document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
@@ -61,6 +63,8 @@ function valitseLaite() {
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pKa.cpu;
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
+
+        document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelNA.checked) {
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pNa.verkko;
@@ -75,6 +79,8 @@ function valitseLaite() {
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pNa.cpu;
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
+
+        document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelKuusi.checked) {
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "Verkkoteknologia: " + pKa.verkko;
@@ -89,12 +95,16 @@ function valitseLaite() {
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pKa.cpu;
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
+
+        document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
 arvioiLaiteValinta()
 }
 
 function arvioiLaiteValinta() {
     if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
+        document.getElementById("laiteYksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
+
         document.getElementById("laiteYksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteYksiPaino").innerHTML = "";
         document.getElementById("laiteYksiRakenne").innerHTML = "";
@@ -109,6 +119,8 @@ function arvioiLaiteValinta() {
         document.getElementById("laiteYksiMuisti").innerHTML = "";
     }
     if (laiteKaksiPixelKuusi.checked && laiteKaksiPixelNA.checked) {
+        document.getElementById("laiteKaksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
+
         document.getElementById("laiteKaksiVerkkoTeknologia").innerHTML = "";
         document.getElementById("laiteKaksiPaino").innerHTML = "";
         document.getElementById("laiteKaksiRakenne").innerHTML = "";
