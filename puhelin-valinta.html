@@ -38,14 +38,14 @@
 
 
     <div class="row">
-      <div class="column" style="background-color:#aaa;">
+      <div class="column">
         <article id="laiteRajaus">
           <p>Valitse laite:</p>
           <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel4a">Pixel 4a <br>
           <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteYksiPixel6">Pixel 6
         </article>
       </div>
-      <div class="column" style="background-color:#bbb;">
+      <div class="column">
         <article id="laiteRajaus">
           <p>Valitse laite 2: </p>
       <input onclick="valitseLaite()" class="checkbox-kytkin" type="checkbox" id="laiteKaksiPixel4a">Pixel 4a <br>
@@ -55,6 +55,14 @@
     </div>
 
 <table>
+  <tr>
+    <td><p style="color:red;" id="laiteYksiVirhe"></p></td>
+    <td><p style="color:red;" id="laiteKaksiVirhe"></p></td>
+  </tr>
+  <tr>
+    <td><p style="font-size:150%;" id="onkoLaiteYksiValittu"></p></td>
+    <td><p style="font-size:150%;" id="onkoLaiteKaksiValittu"></p></td>
+  </tr>
   <tr>
     <td><p id="laiteYksiPaino"></p></td>
     <td><p id="laiteKaksiPaino"></p></td>
@@ -102,10 +110,6 @@
   <tr>
     <td><p id="laiteYksiTurvallisuusSiru"></p></td>
     <td><p id="laiteKaksiTurvallisuusSiru"></p></td> 
-  </tr>
-  <tr>
-    <td><p style="color:red;" id="laiteYksiVirhe"></p></td>
-    <td><p style="color:red;" id="laiteKaksiVirhe"></p></td>
   </tr>
 </table>
 

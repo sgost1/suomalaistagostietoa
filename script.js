@@ -48,6 +48,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
         document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
 
+        document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 4a";
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteYksiPixelKuusi.checked) {
@@ -64,6 +65,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
         document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
 
+        document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 6"
         document.getElementById("laiteYksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelNA.checked) {
@@ -80,6 +82,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
         document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
 
+        document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 4a";
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
     if (laiteKaksiPixelKuusi.checked) {
@@ -96,6 +99,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
         document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
 
+        document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 6";
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
     }
 arvioiLaiteValinta()
@@ -131,6 +135,7 @@ function alustaLaiteYksiTiedot() {
     document.getElementById("laiteYksiGpu").innerHTML = "";
     document.getElementById("laiteYksiMuisti").innerHTML = "";
     document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "";
+    document.getElementById("onkoLaiteYksiValittu").innerHTML = "";
 }
 function alustaLaiteKaksiTiedot() {
     document.getElementById("laiteKaksiPaino").innerHTML = "";
@@ -145,4 +150,5 @@ function alustaLaiteKaksiTiedot() {
     document.getElementById("laiteKaksiGpu").innerHTML = "";
     document.getElementById("laiteKaksiMuisti").innerHTML = "";
     document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "";
+    document.getElementById("onkoLaiteKaksiValittu").innerHTML = "";
 }
