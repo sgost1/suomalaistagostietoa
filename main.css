@@ -16,6 +16,25 @@ body {
     background-size: 400px 600px;
 }
 
+#laiteRajaus {
+    color:black;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: rgb(103, 93, 79);
+    box-sizing: content-box;  
+    width: auto;
+    height: auto;
+    padding: 5px;
+}
+  
+#laiteRajaus p {
+    color:black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 125%;
+}
+
 .checkbox-kytkin {
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
@@ -56,21 +75,17 @@ body {
 
 * {
     box-sizing: border-box;
-  }
-  
-  /* Create two equal columns that floats next to each other */
+}
   .column {
     float: left;
     width: 50%;
     padding: 10px;
-  }
-  
-  /* Clear floats after the columns */
+}
   .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 #valkoinen {
   color: white;
