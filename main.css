@@ -22,11 +22,11 @@ table, th, td {
 }
 
 #laiteRajaus {
-    color:black;
+    color:white;
     font-weight: bold;
     border: 1px solid grey;
     border-radius: 10px;
-    background-color: rgb(103, 93, 79);
+    background-color: black;
     box-sizing: content-box;  
     width: auto;
     height: auto;
@@ -34,7 +34,6 @@ table, th, td {
 }
   
 #laiteRajaus p {
-    color:black;
     text-align: center;
     font-weight: bold;
     font-size: 125%;
