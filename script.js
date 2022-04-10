@@ -40,7 +40,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pNa.sim;
         document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pNa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pNa.koko;
-        document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio" + pNa.resoluutio;
+        document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio: " + pNa.resoluutio;
         document.getElementById("laiteYksiSuojaus").innerHTML = "Suojaus: " + pNa.suojaus;
         document.getElementById("laiteYksiSoc").innerHTML = "SoC: " + pNa.soc;
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pNa.cpu;
@@ -58,7 +58,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pKa.sim;
         document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pKa.koko;
-        document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio" + pKa.resoluutio;
+        document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio: " + pKa.resoluutio;
         document.getElementById("laiteYksiSuojaus").innerHTML = "Suojaus: " + pKa.suojaus;
         document.getElementById("laiteYksiSoc").innerHTML = "SoC: " + pKa.soc;
         document.getElementById("laiteYksiCpu").innerHTML = "CPU: " + pKa.cpu;
@@ -75,7 +75,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pNa.sim;
         document.getElementById("laiteKaksiNaytto").innerHTML = "Näyttö: " + pNa.nautonTyyli;
         document.getElementById("laiteKaksiKoko").innerHTML = "Koko: " + pNa.koko;
-        document.getElementById("laiteKaksiResoluutio").innerHTML = "Resoluutio" + pNa.resoluutio;
+        document.getElementById("laiteKaksiResoluutio").innerHTML = "Resoluutio: " + pNa.resoluutio;
         document.getElementById("laiteKaksiSuojaus").innerHTML = "Suojaus: " + pNa.suojaus;
         document.getElementById("laiteKaksiSoc").innerHTML = "SoC: " + pNa.soc;
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pNa.cpu;
@@ -92,7 +92,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiSim").innerHTML = "SIM: " + pKa.sim;
         document.getElementById("laiteKaksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
         document.getElementById("laiteKaksiKoko").innerHTML = "Koko: " + pKa.koko;
-        document.getElementById("laiteKaksiResoluutio").innerHTML = "Resoluutio" + pKa.resoluutio;
+        document.getElementById("laiteKaksiResoluutio").innerHTML = "Resoluutio: " + pKa.resoluutio;
         document.getElementById("laiteKaksiSuojaus").innerHTML = "Suojaus: " + pKa.suojaus;
         document.getElementById("laiteKaksiSoc").innerHTML = "SoC: " + pKa.soc;
         document.getElementById("laiteKaksiCpu").innerHTML = "CPU: " + pKa.cpu;
