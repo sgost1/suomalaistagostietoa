@@ -174,9 +174,19 @@ jos täytyisi luetella kaikki poikkeudet.</p>
 
 <section>
 <h2 id="baseband"><a id="valkoinen" href="#baseband">Onko baseband eristetty?</a></h2>
-<p>Kyllä, baseband on eristetty kaikilla tuetuilla laitteilla. Muistipääsy on osioitu IOMMUn toimesta ja rajoitettu sisäiseen muistiin sekä
-muistiin joka on jaettu ajuri implementaation toimesta. Baseband kaikilla tuetuilla laitteilla joissa on Qualcommin SoC implementoi
-Wi-Fin ja Bluetoothin omina sandboxattuina prosesseina.</p>
+<p>Kyllä, baseband on eristetty kaikilla virallisesti tuetuilla laitteilla. Muistinkäyttö on paloiteltu IOMMUn toimesta
+  ja rajoitettu sisäiseen muistiin ja muistiin jonka ajurit jakaa. Baseband kaikilla tuetuilla laitteilla implementoi Wi-Fin ja Bluetoothin
+  erillisinä sandboxattuina prosesseina.</p>
+  
+  <p>Aiemmat laitteet kuin Pixelit sisälsi Wi-Fin ja Bluetoothin erillisellä järjestelmäpiirillä. Tämä oli suuri ongelma mutta nykyään
+  järjestelmäpiiri tarjoaa nämä kaikilla tuetuilla laitteilla.</p>
+  
+  <p>Se että komponentti on erillisellä sirulla ei tarkoita että se olisi eristetty. Ollakseen eristetty, ajurien on kohdeltava
+  tätä luottamattomana. Jos tällä on DMA pääsy niin se pitää olla rajoitettu IOMMUn kautta ja ajurien on kohdeltava jaettua muistia
+  luottamattomana. Siellä on runsaasti hyökkäyspintaa basenabdin ja siihen liitetyn kernel-/käyttäjätilaohjelmistopinon välillä. OS
+  turvallisuus on erittäin oleellinen osa pitääkseen laitteistokomponentit erillään kuten radiot ja suurin osa hyökkäyspinnasta onkin
+  ohjelmistossa. Käyttöjärjestelmä tukeutuu siihen että laitteisto ja laiteohjelmisto pystyy tähän mutta päätyy itse olemaan tästä vastuussa
+  käyttöliittymän ja käyttöjärjestelmän sivutoteutuksen monimutkaisuuden vuoksi.</p>
 </section>
 
 <h3 id="qaotsikot">Sovellukset</h3>
