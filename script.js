@@ -4,18 +4,6 @@ const laiteYksiPixelKuusi = document.getElementById("laiteYksiPixel6");
 const laiteKaksiPixelNA = document.getElementById("laiteKaksiPixel4a");
 const laiteKaksiPixelKuusi = document.getElementById("laiteKaksiPixel6");
 
-var dateFirst = new Date("11/25/2017");
-var dateSecond = new Date("11/28/2017");
-
-// time difference
-var timeDiff = Math.abs(dateSecond.getTime() - dateFirst.getTime());
-
-// days difference
-var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-// difference
-alert(diffDays);
-
 const pNa = { // Pixel 4a
     paino:"143 g",
     rakenne:"Edestä Gorilla Glass 3, takaata muovia, runko muovia",
@@ -43,7 +31,7 @@ const pKa = { // Pixel 6
     gpu:"Mali-G78 MP20",
     muisti:"128GB 8GB RAM",
     turvallisuusSiru:"Titan M2"
-}
+};
 
 function valitseLaite() {
     if (laiteYksiPixelNA.checked) {
