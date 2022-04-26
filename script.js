@@ -9,9 +9,6 @@ let nykyAika = new Date();
 let p4aEol = '2023' - nykyAika.getFullYear();
 let p6Eol = '2026' - nykyAika.getFullYear();
 
-
-
-
 const pNa = { // Pixel 4a
     paino:"143 g",
     rakenne:"Corning Gorilla Glass 3 cover glass",
