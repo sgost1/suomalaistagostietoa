@@ -60,7 +60,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pKa.paino;
         document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pKa.sim;
-        document.getElementById("laiteYksiNaytto").innerHTML = "Näytön Koko: " + pKa.nautonTyyli;
+        document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Näytön koko: " + pKa.koko;
         document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio: " + pKa.resoluutio;
         document.getElementById("laiteYksiSoc").innerHTML = "SoC: " + pKa.soc;
