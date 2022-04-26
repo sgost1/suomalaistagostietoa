@@ -6,31 +6,29 @@ const laiteKaksiPixelKuusi = document.getElementById("laiteKaksiPixel6");
 
 const pNa = { // Pixel 4a
     paino:"143 g",
-    rakenne:"Edestä Gorilla Glass 3, takaata muovia, runko muovia",
+    rakenne:"Corning Gorilla Glass 3 cover glass",
     sim:"Nano-SIM ja/tai eSIM",
     nautonTyyli:"OLED, HDR",
-    koko:"15cm",
+    koko:"148mm",
     resoluutio:"1080 x 2340 pixeliä",
-    suojaus:"Corning Gorilla Glass 3",
-    soc:"Qualcomm SDM730 Snapdragon 730G (8nm)",
-    cpu:"Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)",
+    soc:"Qualcomm <br> SDM730 Snapdragon 730G (8nm)",
+    cpu:"Octa-core <br> 2x2.2 GHz Kryo 470 Gold <br> 6x1.8 GHz Kryo 470 Silver",
     gpu:"Adreno 618",
-    muisti:"128GB 6GB RAM",
+    muisti:"6 GB LPDDR4x RAM",
     turvallisuusSiru:"Titan M"
 };
 const pKa = { // Pixel 6
     paino:"207 g",
-    rakenne:"Edestä Gorilla Glass Victus, takaata Gorilla Glass 6, runko alumiinia",
+    rakenne:"Corning Gorilla Glass Victus cover glass",
     sim:"Nano-SIM ja/tai eSIM",
     nautonTyyli:"AMOLED, 90Hz, HDR10+",
-    koko:"16cm",
+    koko:"163mm",
     resoluutio:"1080 x 2400 pixeliä",
-    suojaus:"Corning Gorilla Glass Victus",
-    soc:"Google Tensor(5nm)",
-    cpu:"Octa-core (2x2.80 GHz Cortex-X1 & 2x2.25 GHz Cortex-A76 & 4x1.80 GHz Cortex-A55)",
+    soc:"Google <br> Tensor(5nm)",
+    cpu:"Octa-core <br> 2x2.80 GHz Cortex-X1 <br> 2x2.25 GHz Cortex-A76 <br> 4x1.80 GHz Cortex-A55",
     gpu:"Mali-G78 MP20",
-    muisti:"128GB 8GB RAM",
-    turvallisuusSiru:"Titan M2"
+    muisti:"8 GB LPDDR5 RAM",
+    turvallisuusSiru:"Titan M2, Security core"
 };
 
 function valitseLaite() {
@@ -39,7 +37,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pNa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pNa.sim;
         document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pNa.nautonTyyli;
-        document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pNa.koko;
+        document.getElementById("laiteYksiKoko").innerHTML = "Näytön koko: " + pNa.koko;
         document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio: " + pNa.resoluutio;
         document.getElementById("laiteYksiSuojaus").innerHTML = "Suojaus: " + pNa.suojaus;
         document.getElementById("laiteYksiSoc").innerHTML = "SoC: " + pNa.soc;
@@ -56,7 +54,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiPaino").innerHTML = "Paino: " + pKa.paino;
         document.getElementById("laiteYksiRakenne").innerHTML = "Rakenne: " + pKa.rakenne;
         document.getElementById("laiteYksiSim").innerHTML = "SIM: " + pKa.sim;
-        document.getElementById("laiteYksiNaytto").innerHTML = "Näyttö: " + pKa.nautonTyyli;
+        document.getElementById("laiteYksiNaytto").innerHTML = "Näytön Koko: " + pKa.nautonTyyli;
         document.getElementById("laiteYksiKoko").innerHTML = "Koko: " + pKa.koko;
         document.getElementById("laiteYksiResoluutio").innerHTML = "Resoluutio: " + pKa.resoluutio;
         document.getElementById("laiteYksiSuojaus").innerHTML = "Suojaus: " + pKa.suojaus;
