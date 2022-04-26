@@ -4,8 +4,6 @@ const laiteYksiPixelKuusi = document.getElementById("laiteYksiPixel6");
 const laiteKaksiPixelNA = document.getElementById("laiteKaksiPixel4a");
 const laiteKaksiPixelKuusi = document.getElementById("laiteKaksiPixel6");
 
-const valitseVainYksiLaiteVirhe = "VIRHE: Valitse vain yksi laite";
-
 let nykyAika = new Date();
 
 let p4aEol = '2023' - nykyAika.getFullYear();
@@ -59,7 +57,6 @@ function valitseLaite() {
         document.getElementById("laiteYksiEol").innerHTML = "Vuosia tukea jäljellä: " + pNa.eol + " vuotta";
 
         document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 4a";
-        document.getElementById("laiteYksiVirhe").innerHTML = "";
 
     }
     if (laiteYksiPixelKuusi.checked) {
@@ -77,7 +74,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiEol").innerHTML = "Vuosia tukea jäljellä: " + pKa.eol + " vuotta";
 
         document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 6"
-        document.getElementById("laiteYksiVirhe").innerHTML = "";
+
     }
     if (laiteKaksiPixelNA.checked) {
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pNa.paino;
@@ -94,7 +91,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiEol").innerHTML = "Vuosia tukea jäljellä: " + pNa.eol + " vuotta";
 
         document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 4a";
-        document.getElementById("laiteKaksiVirhe").innerHTML = "";
+
     }
     if (laiteKaksiPixelKuusi.checked) {
         document.getElementById("laiteKaksiPaino").innerHTML = "Paino: " + pKa.paino;
@@ -111,55 +108,6 @@ function valitseLaite() {
         document.getElementById("laiteKaksiEol").innerHTML = "Vuosia tukea jäljellä: " + pKa.eol + " vuotta";
 
         document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 6";
-        document.getElementById("laiteKaksiVirhe").innerHTML = "";
-    }
-arvioiLaiteValinta()
-}
 
-function arvioiLaiteValinta() {
-    if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
-        document.getElementById("laiteYksiVirhe").innerHTML = valitseVainYksiLaiteVirhe;
-        alustaLaiteYksiTiedot()
     }
-    if (laiteKaksiPixelKuusi.checked && laiteKaksiPixelNA.checked) {
-        document.getElementById("laiteKaksiVirhe").innerHTML = valitseVainYksiLaiteVirhe;
-        alustaLaiteKaksiTiedot()
-    }
-    if (!laiteYksiPixelKuusi.checked && !laiteYksiPixelNA.checked) {
-        alustaLaiteYksiTiedot()
-    }
-    if (!laiteKaksiPixelKuusi.checked && !laiteKaksiPixelNA.checked) {
-        alustaLaiteKaksiTiedot()
-    }
-}
-
-function alustaLaiteYksiTiedot() {
-    document.getElementById("laiteYksiPaino").innerHTML = "";
-    document.getElementById("laiteYksiRakenne").innerHTML = "";
-    document.getElementById("laiteYksiSim").innerHTML = "";
-    document.getElementById("laiteYksiNaytto").innerHTML = "";
-    document.getElementById("laiteYksiKoko").innerHTML = "";
-    document.getElementById("laiteYksiResoluutio").innerHTML = "";
-    document.getElementById("laiteYksiSoc").innerHTML = "";
-    document.getElementById("laiteYksiCpu").innerHTML = "";
-    document.getElementById("laiteYksiGpu").innerHTML = "";
-    document.getElementById("laiteYksiMuisti").innerHTML = "";
-    document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "";
-    document.getElementById("laiteYksiEol").innerHTML = "";
-    document.getElementById("onkoLaiteYksiValittu").innerHTML = "";
-}
-function alustaLaiteKaksiTiedot() {
-    document.getElementById("laiteKaksiPaino").innerHTML = "";
-    document.getElementById("laiteKaksiRakenne").innerHTML = "";
-    document.getElementById("laiteKaksiSim").innerHTML = "";
-    document.getElementById("laiteKaksiNaytto").innerHTML = "";
-    document.getElementById("laiteKaksiKoko").innerHTML = "";
-    document.getElementById("laiteKaksiResoluutio").innerHTML = "";
-    document.getElementById("laiteKaksiSoc").innerHTML = "";
-    document.getElementById("laiteKaksiCpu").innerHTML = "";
-    document.getElementById("laiteKaksiGpu").innerHTML = "";
-    document.getElementById("laiteKaksiMuisti").innerHTML = "";
-    document.getElementById("laiteKaksiEol").innerHTML = "";
-    document.getElementById("laiteYksiEol").innerHTML = "";
-    document.getElementById("onkoLaiteKaksiValittu").innerHTML = "";
 }
