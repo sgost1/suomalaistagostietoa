@@ -4,6 +4,16 @@ const laiteYksiPixelKuusi = document.getElementById("laiteYksiPixel6");
 const laiteKaksiPixelNA = document.getElementById("laiteKaksiPixel4a");
 const laiteKaksiPixelKuusi = document.getElementById("laiteKaksiPixel6");
 
+const valitseVainYksiLaiteVirhe = "VIRHE: Valitse vain yksi laite";
+
+let nykyAika = new Date();
+
+let p4aEol = '2023' - nykyAika.getFullYear();
+let p6Eol = '2026' - nykyAika.getFullYear();
+
+
+
+
 const pNa = { // Pixel 4a
     paino:"143 g",
     rakenne:"Corning Gorilla Glass 3 cover glass",
@@ -15,7 +25,8 @@ const pNa = { // Pixel 4a
     cpu:"Octa-core <br> 2x2.2 GHz Kryo 470 Gold <br> 6x1.8 GHz Kryo 470 Silver",
     gpu:"Adreno 618",
     muisti:"6 GB LPDDR4x RAM",
-    turvallisuusSiru:"Titan M"
+    turvallisuusSiru:"Titan M",
+    eol:p4aEol
 };
 const pKa = { // Pixel 6
     paino:"207 g",
@@ -28,7 +39,8 @@ const pKa = { // Pixel 6
     cpu:"Octa-core <br> 2x2.80 GHz Cortex-X1 <br> 2x2.25 GHz Cortex-A76 <br> 4x1.80 GHz Cortex-A55",
     gpu:"Mali-G78 MP20",
     muisti:"8 GB LPDDR5 RAM",
-    turvallisuusSiru:"Titan M2, Security core"
+    turvallisuusSiru:"Titan M2, Security core",
+    eol:p6Eol
 };
 
 function valitseLaite() {
@@ -44,6 +56,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
         document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
+        document.getElementById("laiteYksiEol").innerHTML = "Vuosia tukea jäljellä: " + pNa.eol + " vuotta";
 
         document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 4a";
         document.getElementById("laiteYksiVirhe").innerHTML = "";
@@ -61,6 +74,7 @@ function valitseLaite() {
         document.getElementById("laiteYksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteYksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
         document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
+        document.getElementById("laiteYksiEol").innerHTML = "Vuosia tukea jäljellä: " + pKa.eol + " vuotta";
 
         document.getElementById("onkoLaiteYksiValittu").innerHTML = "Pixel 6"
         document.getElementById("laiteYksiVirhe").innerHTML = "";
@@ -77,6 +91,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pNa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pNa.muisti;
         document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pNa.turvallisuusSiru;
+        document.getElementById("laiteKaksiEol").innerHTML = "Vuosia tukea jäljellä: " + pNa.eol + " vuotta";
 
         document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 4a";
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
@@ -93,6 +108,7 @@ function valitseLaite() {
         document.getElementById("laiteKaksiGpu").innerHTML = "GPU: " + pKa.gpu;
         document.getElementById("laiteKaksiMuisti").innerHTML = "Muisti: " + pKa.muisti;
         document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "Turvallisuus siru: " + pKa.turvallisuusSiru;
+        document.getElementById("laiteKaksiEol").innerHTML = "Vuosia tukea jäljellä: " + pKa.eol + " vuotta";
 
         document.getElementById("onkoLaiteKaksiValittu").innerHTML = "Pixel 6";
         document.getElementById("laiteKaksiVirhe").innerHTML = "";
@@ -102,11 +118,11 @@ arvioiLaiteValinta()
 
 function arvioiLaiteValinta() {
     if (laiteYksiPixelKuusi.checked && laiteYksiPixelNA.checked) {
-        document.getElementById("laiteYksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
+        document.getElementById("laiteYksiVirhe").innerHTML = valitseVainYksiLaiteVirhe;
         alustaLaiteYksiTiedot()
     }
     if (laiteKaksiPixelKuusi.checked && laiteKaksiPixelNA.checked) {
-        document.getElementById("laiteKaksiVirhe").innerHTML = "VIRHE: Valitse vain yksi laite";
+        document.getElementById("laiteKaksiVirhe").innerHTML = valitseVainYksiLaiteVirhe;
         alustaLaiteKaksiTiedot()
     }
     if (!laiteYksiPixelKuusi.checked && !laiteYksiPixelNA.checked) {
@@ -129,6 +145,7 @@ function alustaLaiteYksiTiedot() {
     document.getElementById("laiteYksiGpu").innerHTML = "";
     document.getElementById("laiteYksiMuisti").innerHTML = "";
     document.getElementById("laiteYksiTurvallisuusSiru").innerHTML = "";
+    document.getElementById("laiteYksiEol").innerHTML = "";
     document.getElementById("onkoLaiteYksiValittu").innerHTML = "";
 }
 function alustaLaiteKaksiTiedot() {
@@ -142,6 +159,7 @@ function alustaLaiteKaksiTiedot() {
     document.getElementById("laiteKaksiCpu").innerHTML = "";
     document.getElementById("laiteKaksiGpu").innerHTML = "";
     document.getElementById("laiteKaksiMuisti").innerHTML = "";
-    document.getElementById("laiteKaksiTurvallisuusSiru").innerHTML = "";
+    document.getElementById("laiteKaksiEol").innerHTML = "";
+    document.getElementById("laiteYksiEol").innerHTML = "";
     document.getElementById("onkoLaiteKaksiValittu").innerHTML = "";
 }
