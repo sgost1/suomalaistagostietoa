@@ -97,7 +97,7 @@ Tämä pienentää sensitiivisten tietojen elinaikaa sekä estää use-after-fre
     <li>SElinux muutoksia</li>
     <li>Useiden turhien asioiden poistaminen kuten system_other odex</li>
   </ul>
-  <li>Turvallinen sovellusten laukaisu malli <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#exec">(Exec)</a></li>
+  <li>Turvallinen sovellusten laukaisu malli <a href="https://sgost1.github.io/suomalaistagostietoa/kautto.html#exec">(Exec) + kyky kytkeä pois käytöstä ja käyttää Androidin Zygote mallia</a></li>
   <li>Network lupakytkin estämään molemmat suorat ja ei suorat pääsyt verkkoihin. Localhost on myös suojattu tämän avulla mikä on tärkeää estämään sovelluksia kommunikoimasta käyttäjäprofiilien välillä. Toisinkuin palomuuri tyylinen asettelu, Network lupakytkin estää sovelluksia käyttämästä verkkoja käyttöjärjestelmän APIen kautta tai muiden sovellusten kunhan ne ovat merkitty oikein</li>
   <li>INTERNET lupa jota käytetään Network lupakytminen perustana on vahvistettu ja kunnollinen tuki mahdollistaen estämisen/sallimisen per-profiili kohtaisesti</li>
   <li>Kyky evätä haluamiltaan sovelluksilta Sensors pääsy mikä estää sovellusta käyttämästä laitesensoreita (kiihtyvyysanturi, gyroskooppi, kompassi, barometri, lämpömittari jne)</li>
@@ -116,7 +116,9 @@ Tämä pienentää sensitiivisten tietojen elinaikaa sekä estää use-after-fre
   <li>Vaatii laitteen avausta ennen kuin sensitiivisiä ominaisuuksia quick-tilesseissä voi käyttää (Wifi, lentokonetila, GPS, NFC jne)</li>
   <li><a href="https://sgost1.github.io/suomalaistagostietoa/kysymys.html#bundle">Minimaalinen määrä ennalta asennettuja sovelluksia / palveluita</a></li>
   <li>Ei Googlen palveluita (GooglePlayPalvelut) tai sovelluksia integroitu itse käyttöjärjestelmään</li>
-  <li>Kyky estää muita käyttäjäprofiileja asentamasta sovelluksia</li>
+  <li>Kyky estää tiettyjä käyttäjäprofiileja asentamasta sovelluksia</li>
+  <li>Kyky kytkeä itse asentamia sovelluksia pois käytöstä samanlailla kuin järjestelmän sovelluksia</li>
+  <li>Moderni APN ja verkostojen konfigurointi mahdollisuudet sekä MMS ja visual-voicemail tietokanta</li>
 </ul>
 
         <footer>
